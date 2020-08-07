@@ -16,7 +16,7 @@ def get_indices_of_item_weights(weights, length, limit):
                 return (index, cache[weight])
         if match_needed is not weight:
             if match_needed in cache:
-                if match_needed >= weight:
+                if cache[match_needed] >= index:
                     return (cache[match_needed], index)
                 else:
                     return (index, cache[match_needed])
